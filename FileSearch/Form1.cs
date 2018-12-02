@@ -95,6 +95,7 @@ namespace FileSearch
             btn_scan.Enabled = false;
             btn_abort.Enabled = true;
             progress_timer.Enabled = true;
+            _lastResultCount = 0;
             results.Clear();
             listbox_results.Items.Clear();
             BeginScan(scannedFileNames, new Regex(textbox_regex.Text));
@@ -211,6 +212,11 @@ namespace FileSearch
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.Save();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
