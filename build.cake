@@ -196,4 +196,4 @@ public void PushTestResults(string filePath)
 	{
 		AppVeyor.UploadTestResults(file, AppVeyorTestResultsType.NUnit3);
 	}
-}
+}AppVeyor-
